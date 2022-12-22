@@ -1,0 +1,153 @@
+@font-face {
+  font-family: customFont;
+  src: url("../fonts/Rubik_80s_Fade/Rubik80sFade-Regular.ttf");
+}
+
+#style-static {
+  width: 100px;
+  height: 100px;
+  border: 2px dotted black;
+  margin-top: 20px;
+
+  position: static;
+  /* top
+  right 
+  bottom 
+  left doesn't work with position static*/
+}
+
+#style-relative {
+  width: 100px;
+  height: 100px;
+  border: 2px dotted black;
+
+  position: relative;
+  top: 20px;
+  right: 20px;
+  bottom: 60px;
+  left: 20px;
+
+  background-image: url("../images/download.png");
+}
+
+#style-absolute {
+  width: 70px;
+  height: 70px;
+  border: 2px dotted black;
+
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+
+  background-color: aliceblue;
+  opacity: 0.6;
+}
+
+#style-sticky {
+  position: sticky;
+  top: 0;
+  background-color: yellow;
+}
+
+#style-fixed {
+  position: fixed;
+  top: 0;
+  background-color: teal;
+  opacity: 0.7;
+  width: 100%;
+}
+
+#style-overflow {
+  width: 100px;
+  height: 100px;
+  border: 2px dotted black;
+
+  /* overflow: hidden; */
+
+  /* overflow: scroll; */
+
+  overflow-x: scroll;
+
+  overflow-y: scroll;
+
+  /* best option */
+  overflow: auto;
+
+  font-family: customFont, cursive;
+}
+
+/* shadow */
+#style-text-shadow {
+  /* h-shadow v-shadow color */
+  text-shadow: 2px 1px teal;
+
+  /* to add blur effect */
+  text-shadow: 2px 1px 2px teal;
+
+  /* white color */
+  /* color: white;
+  text-shadow: 1px 2px 4px #000000; */
+
+  /* add multiple shadows */
+  text-shadow: 2px 2px 4px teal, 2px 2px 2px red;
+}
+
+#shadow-box {
+  width: 100px;
+  height: 100px;
+  /* border: 2px solid black; */
+
+  box-shadow: 5px 5px teal;
+
+  /* to add blur effect */
+  box-shadow: 5px 5px 4px teal;
+
+  /* on all sides */
+  box-shadow: 0 0 2px 2px teal;
+
+  /* on left side */
+  box-shadow: -10px 0px 10px 1px teal;
+}
+
+/* pseudo elements */
+/* select all the li whhich are present as the second child */
+/* li:nth-child(2) {
+  background-color: red;
+} */
+
+/* li:nth-last-of-type(even) {
+    background-color: yellow;
+}
+
+
+li:nth-last-of-type(odd) {
+    background-color: blue;
+} */
+
+li:nth-last-child(2) {
+  background-color: red;
+}
+
+#style-text {
+  border: 1px solid black;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100px;
+
+  text-overflow: clip;
+  text-overflow: ellipsis;
+}
+
+#style-effect {
+  width: 100px;
+  border: 1px solid black;
+  /* word-break: break-word; */
+
+  writing-mode: horizontal-tb;
+  writing-mode: vertical-rl;
+
+  font-family: "Rubik Gemstones", cursive;
+  font-weight: bolder;
+}
